@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F7FB"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bill History"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#17365D"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <ListView
+        android:id="@+id/lvBills"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#D6E0EA"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:background="#FFFFFF"/>
+
+</LinearLayout>

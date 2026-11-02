@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bill Details"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textSize="18sp"
+            android:textColor="#17365D"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tvUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Units"
+            android:textSize="18sp"
+            android:textColor="#17365D"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalCharges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Charges"
+            android:textSize="18sp"
+            android:textColor="#17365D"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tvRebate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rebate"
+            android:textSize="18sp"
+            android:textColor="#17365D"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tvFinalCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Final Cost"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#15803D"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="EDIT BILL"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#2563EB"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="DELETE BILL"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#DC2626"/>
+
+    </LinearLayout>
+</ScrollView>

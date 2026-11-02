@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/electric_logo"
+            android:contentDescription="Electric Bill Calculator Logo"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Electric Bill Calculator"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate your monthly electricity bill easily."
+            android:textSize="14sp"
+            android:textColor="#64748B"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Month"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"/>
+
+        <Spinner
+            android:id="@+id/spMonth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#2563EB"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electricity Usage (kWh)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"/>
+
+        <EditText
+            android:id="@+id/etUnit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter units (1 - 1000)"
+            android:inputType="number"
+            android:maxLength="4"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rebate (%)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"/>
+
+        <RadioGroup
+            android:id="@+id/rgRebate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rb0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1%"/>
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2%"/>
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%"/>
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4%"/>
+
+            <RadioButton
+                android:id="@+id/rb5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5%"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="CALCULATE BILL"
+            android:textStyle="bold"
+            android:backgroundTint="#2563EB"/>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Charges: RM 0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/tvFinal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Final Cost: RM 0.00"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#15803D"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="VIEW BILL HISTORY"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#17365D"/>
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="ABOUT"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#64748B"/>
+
+    </LinearLayout>
+</ScrollView>

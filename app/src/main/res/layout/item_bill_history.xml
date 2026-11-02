@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvHistoryMonth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="January"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#17365D"
+        android:gravity="start"/>
+
+    <TextView
+        android:id="@+id/tvHistoryCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RM 100.00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#218838"
+        android:gravity="end"/>
+
+</LinearLayout>
