@@ -2,7 +2,7 @@ package com.example.electricbillcalculator;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -48,6 +48,19 @@ public class MainActivity extends AppCompatActivity {
         tvTotal = findViewById(R.id.tvTotal);
         tvFinal = findViewById(R.id.tvFinal);
 
+        // Initialize Month Spinner
+        ArrayAdapter<String> monthAdapter = new ArrayAdapter<>(
+                MainActivity.this,
+                android.R.layout.simple_spinner_item,
+                months
+        );
+
+        monthAdapter.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item
+        );
+
+        spMonth.setAdapter(monthAdapter);
+
         // Initialize database
         dbHelper = new DatabaseHelper(this);
 
@@ -56,13 +69,19 @@ public class MainActivity extends AppCompatActivity {
 
         // History button
         btnHistory.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    HistoryActivity.class
+            );
             startActivity(intent);
         });
 
         // About button
         btnAbout.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    AboutActivity.class
+            );
             startActivity(intent);
         });
     }
@@ -101,14 +120,19 @@ public class MainActivity extends AppCompatActivity {
         int selectedRebateId = rgRebate.getCheckedRadioButtonId();
 
         if (selectedRebateId == -1) {
-            Toast.makeText(this,
+            Toast.makeText(
+                    this,
                     "Please select a rebate percentage",
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT
+            ).show();
             return;
         }
 
-        RadioButton selectedRadioButton = findViewById(selectedRebateId);
-        String rebateText = selectedRadioButton.getText().toString();
+        RadioButton selectedRadioButton =
+                findViewById(selectedRebateId);
+
+        String rebateText =
+                selectedRadioButton.getText().toString();
 
         int rebatePercent = Integer.parseInt(
                 rebateText.replace("%", "").trim()
@@ -141,16 +165,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Calculate rebate and final cost
-        double rebateAmount = totalCharges * rebatePercent / 100.0;
+        double rebateAmount =
+                totalCharges * rebatePercent / 100.0;
 
         double finalCost = totalCharges - rebateAmount;
 
         // Display results
-        tvTotal.setText(String.format(Locale.getDefault(),
-                "Total Charges: RM %.2f", totalCharges));
+        tvTotal.setText(String.format(
+                Locale.getDefault(),
+                "Total Charges: RM %.2f",
+                totalCharges
+        ));
 
-        tvFinal.setText(String.format(Locale.getDefault(),
-                "Final Cost: RM %.2f", finalCost));
+        tvFinal.setText(String.format(
+                Locale.getDefault(),
+                "Final Cost: RM %.2f",
+                finalCost
+        ));
 
         // Save bill into SQLite database
         boolean inserted = dbHelper.insertBill(
@@ -162,13 +193,20 @@ public class MainActivity extends AppCompatActivity {
         );
 
         if (inserted) {
-            Toast.makeText(this,
+
+            Toast.makeText(
+                    this,
                     "Bill calculated and saved successfully!",
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT
+            ).show();
+
         } else {
-            Toast.makeText(this,
+
+            Toast.makeText(
+                    this,
                     "Error saving bill!",
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT
+            ).show();
         }
     }
 }

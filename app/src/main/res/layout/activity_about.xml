@@ -18,11 +18,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="About Application"
-            android:textSize="28sp"
+            android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#17365D"
             android:gravity="center"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp" />
 
         <ImageView
             android:layout_width="150dp"
@@ -92,7 +95,7 @@
             android:id="@+id/tvDeveloper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Student Name: NURUL ELISYAH BT MUHAMMAD ARSHAD&#10;Student ID: 2022726869 ID&#10;Course: ICT602&#10;Course Name: Mobile Technology"
+            android:text="Student Name: NURUL ELISYAH BT MUHAMMAD ARSHAD&#10;Student ID: 2022726869 &#10;ID Course: ICT602&#10;Course Name: Mobile Technology"
             android:textSize="16sp"
             android:textColor="#334155"
             android:lineSpacingExtra="6dp"
@@ -129,9 +132,13 @@
         <Button
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
+            android:minHeight="55dp"
             android:text="BACK TO HOME"
-            android:backgroundTint="#17365D"/>
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="#17365D" />
 
     </LinearLayout>
 </ScrollView>
